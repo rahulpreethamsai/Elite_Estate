@@ -27,8 +27,8 @@ export default function Navbar() {
     };
 
     return (
-        <header className="bg-gradient-to-r from-white via-[#f7f1fb] to-[#e4d4f7] text-black">
-            <nav className="max-w-[1300px] mx-auto flex items-center justify-between py-4 px-4 lg:px-0 font-semibold">
+        <header className="bg-white lg:bg-gradient-to-r from-white via-white to-purple-800 text-black  sticky top-0 z-10">
+            <nav className="max-w-[1300px] mx-auto flex items-center justify-between py-4 px-4 font-semibold">
 
                 <Link to="/" className="flex items-center">
                     <svg width="90" height="54" viewBox="0 0 90 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,20 +67,20 @@ export default function Navbar() {
                 </ul>
 
                 <div className="hidden lg:flex items-center gap-4">
-                    <button className="px-4 py-2 border border-purple-700 rounded-lg hover:bg-purple-700 hover:text-white transition cursor-pointer" onClick={handleContact}>
+                    <button className="px-4 py-2 border border-white text-white rounded-lg hover:bg-purple-700 transition cursor-pointer" onClick={handleContact}>
                         Contact Us
                     </button>
 
                     {isLoggedIn ? (
                         <button
-                            className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition cursor-pointer"
+                            className="px-4 py-2 bg-white text-purple-700 rounded-lg hover:bg-purple-800 transition cursor-pointer"
                             onClick={handleLogout}
                         >
                             Log Out
                         </button>
                     ) : (
                         <button
-                            className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition cursor-pointer"
+                            className="px-4 py-2 bg-white text-purple-700 rounded-lg hover:bg-purple-800 transition cursor-pointer"
                             onClick={() => navigate("/auth")}
                         >
                             Log In

@@ -43,7 +43,7 @@ export default function AboutSection() {
 
                 </div>
 
-                <div className="border-t border-black my-10"></div>
+                <div className="md:border-t border-black md:my-10"></div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
 
