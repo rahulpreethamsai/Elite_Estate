@@ -17,7 +17,7 @@ const AuthForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError('');
-    const endpoint = isSignUp ? '/users/register' : '/users/login';
+    const endpoint = isSignUp ? '/auth/register' : '/auth/login';
 
     try {
       const { data } = await API.post(endpoint, formData);
