@@ -1,8 +1,11 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/authContext";
 
 export default function Navbar() {
     const navigate = useNavigate();
+
+    const { isLoggedIn, logout } = useAuth();
 
     const navLinks = [
         "Home",
@@ -13,9 +16,14 @@ export default function Navbar() {
         "Knowledge Center",
     ];
 
-    function handleContact(e : React.MouseEvent<HTMLButtonElement>){
+    function handleContact(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
         navigate("/contact");
+    };
+
+    function handleLogout() {
+        logout();
+        navigate("/");
     };
 
     return (
@@ -63,12 +71,21 @@ export default function Navbar() {
                         Contact Us
                     </button>
 
-                    <button 
-                        className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition cursor-pointer"
-                        onClick={() => navigate("/auth")}
-                    >
-                        Log In
-                    </button>
+                    {isLoggedIn ? (
+                        <button
+                            className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition cursor-pointer"
+                            onClick={handleLogout}
+                        >
+                            Log Out
+                        </button>
+                    ) : (
+                        <button
+                            className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition cursor-pointer"
+                            onClick={() => navigate("/auth")}
+                        >
+                            Log In
+                        </button>
+                    )}
                 </div>
 
                 <button className="lg:hidden">
