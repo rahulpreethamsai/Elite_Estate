@@ -1,11 +1,11 @@
 
 
 export default function HeroSection() {
-    function handleClick(){
+    function handleClick() {
         alert("🎉Soon To Be Launched!!🎉")
     };
     return (
-        <main className="min-h-screen bg-gradient-to-r from-white via-[#f7f1fb] to-[#e4d4f7]">
+        <main className="h-fit bg-gradient-to-r from-white via-[#f7f1fb] to-[#e4d4f7]">
             <section className="max-w-[1300px] mx-auto px-4 lg:px-0  grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div>
                     <div className="flex items-center gap-2">
@@ -48,10 +48,19 @@ export default function HeroSection() {
 
                     </div>
                 </div>
-                <div className="relative flex justify-center lg:justify-end">
-                    <img src='/phone1.jpg' className="w-64 lg:w-80 shadow-xl rounded-4xl border-8 border-black/10" alt="card1" />
-                    <img src='/phone2.jpg' className="w-64 h-[90%] lg:w-80 absolute left-0 border-8 border-black/10 shadow-xl rounded-4xl" alt="card2" />
+                <div className="flex justify-center lg:justify-end gap-6 mb-10">
+                    <img
+                        src="/phone2.jpg"
+                        className="w-64 lg:w-80 h-150 shadow-xl rounded-4xl border-8 border-black/10"
+                        alt="card1"
+                    />
+                    <img
+                        src="/phone1.jpg"
+                        className="w-64 h-150 lg:w-80 shadow-xl rounded-4xl border-8 border-black/10"
+                        alt="card2"
+                    />
                 </div>
+
             </section>
         </main>
     );
