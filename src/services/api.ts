@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({ 
-  baseURL: 'https://localhost:3001/api' 
+  baseURL: 'https://ee-backend-rt70.onrender.com/api' 
 });
 
 
