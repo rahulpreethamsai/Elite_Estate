@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function Navbar() {
         <header className="bg-gradient-to-r from-white via-[#f7f1fb] to-[#e4d4f7] text-black">
             <nav className="max-w-[1300px] mx-auto flex items-center justify-between py-4 px-4 lg:px-0 font-semibold">
 
-                <a href="#" className="flex items-center">
+                <Link to="/" className="flex items-center">
                     <svg width="90" height="54" viewBox="0 0 90 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M65.8917 35.1459C74.6885 33.7225 83.2152 36.0377 90.0001 40.9653C84.9527 47.5181 77.658 52.1979 69.1007 53.5844C60.3019 55.01 51.7771 52.6927 44.9923 47.7651C50.0397 41.2123 57.3363 36.5324 65.8917 35.1459Z" fill="#322D76" />
                         <path d="M65.8917 35.1459C74.6885 33.7225 83.2152 36.0377 90.0001 40.9653C84.9527 47.5181 77.658 52.1979 69.1007 53.5844C60.3019 55.01 51.7771 52.6927 44.9923 47.7651C50.0397 41.2123 57.3363 36.5324 65.8917 35.1459Z" stroke="white" />
@@ -40,7 +40,7 @@ export default function Navbar() {
                         <path d="M45.4527 0C50.8492 6.23976 54.1401 14.5251 54.1402 23.6221C54.1402 32.9746 50.6609 41.4722 44.9918 47.7656C39.5954 41.5258 36.3053 33.2384 36.3053 24.1436C36.3053 14.7932 39.7837 6.29337 45.4527 0Z" stroke="white" />
                     </svg>
 
-                </a>
+                </Link>
 
                 <ul className="hidden lg:flex items-center gap-10">
                     {navLinks.map((link) => (
